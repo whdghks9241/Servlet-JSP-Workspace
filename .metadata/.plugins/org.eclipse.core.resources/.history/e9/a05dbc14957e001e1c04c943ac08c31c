@@ -1,0 +1,11 @@
+package com.kh.product;
+
+public class Product {
+	
+	private int productId;
+	private String productName;
+	private String category;
+	private double price;
+	private int stockQuantity;
+	
+}

@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+	function displayLoginFail() {
+		// 팝업으로 표시할 오류메세지
+		alert("로그인에 실패 하였습니다.");
+	}
+	
+</script>
+</body>
+</html>

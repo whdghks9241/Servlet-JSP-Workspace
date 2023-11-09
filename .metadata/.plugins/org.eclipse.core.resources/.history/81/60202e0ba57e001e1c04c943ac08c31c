@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>제품 상세 정보</h1>
+<%
+	String = id 값을 가져오겠다.
+	Product product = productDAo.get();
+%>
+<p> 제품 ID : <%= product.getProductId() %></p>
+
+</body>
+</html>

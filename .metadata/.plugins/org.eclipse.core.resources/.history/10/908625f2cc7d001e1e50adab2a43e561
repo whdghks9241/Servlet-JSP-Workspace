@@ -1,0 +1,49 @@
+
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String jdbcURL = "jdbc:oracle:thin:@localhost:1521:xe";
+		String jdbcUsername = "SM";
+		String jdbcPassword = "SM1234";
+		
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		try {
+			Connection connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+			
+			// 로그인시 사용되는 아이디
+			// 로그인시 사용되는 비밀번호
+			String ID = request.getParameter("ID");
+			String PASSWORD = request.getParameter("PASSWORD");
+			
+			// select 일치하는 유저가 있는지 체크
+			String sql = "SELECT * FROM USERINFO WHERE ID = ? AND PASSWORD = ?";
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

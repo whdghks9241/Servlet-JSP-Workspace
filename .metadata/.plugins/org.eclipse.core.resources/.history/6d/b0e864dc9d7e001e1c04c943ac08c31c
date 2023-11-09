@@ -1,0 +1,28 @@
+package com.kh.product;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductDAO {
+
+	private static final String jdbcURL = "jdbc:oracle:thin:@localhost:1521:xe";
+	private static final String jdbcUsername = "khcafe";
+	private static final String jdbcPassword = "khcafe";
+	
+	public ProductDAO() {
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public List<Product> getAllProducts() {
+		
+		List<Product> products = new ArrayList<>();
+		
+		return products;
+		
+	}
+}

@@ -1,0 +1,5 @@
+1699488556867	Move 'ojdbc8.jar' to 'lib'
+1699488563870	Move 'Product.jsp' to 'webapp'
+1699488576244	Delete element
+1699488578217	Move 'productList.jsp' to 'webapp'
+1699488591495	Move 'com' to 'java'

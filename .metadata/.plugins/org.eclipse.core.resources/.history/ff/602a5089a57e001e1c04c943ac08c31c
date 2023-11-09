@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    
+<%@ page import="com.kh.product.Product"%>
+<%@ page import="com.kh.product.productDAO"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>제품 상세 정보</h1>
+<%
+	// String = id 값을 가져오겠다.
+	String productIdValue = request.getParameter("productid");
+	int productId = Integer.parseInt(productIdValue);
+	
+	Product producst = productDAO.get();
+%>
+<p> 제품 ID : <%= products.getProductId() %></p>
+
+</body>
+</html>
